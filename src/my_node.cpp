@@ -40,7 +40,6 @@ void mapCallback(const nav_msgs::OccupancyGrid& map_msg) {
       }
     }
   }
-  //map_msg.data() gli devo passare un vettore nuovo contenente tutti i map_msgs.dat(i)?
   GridMap grid_map(0.1, 0, 0);
   grid_map.loadFromVector(map_msg.data, map_msg.info.resolution, map_msg.info.width,
                           map_msg.info.height); 
